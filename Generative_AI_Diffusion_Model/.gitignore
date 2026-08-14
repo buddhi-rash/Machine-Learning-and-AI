@@ -1,0 +1,20 @@
+# Ignore Data Folders
+data/
+
+
+# Ignore large data files
+*.csv
+*.zip
+*.tar.gz
+
+
+# Ignore Model Weights and Checkpoints (These are also massive)
+
+*.pth
+checkpoints/
+
+# Ignore Python & Jupyter Junk files
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
