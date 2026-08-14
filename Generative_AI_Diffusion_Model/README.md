@@ -75,8 +75,13 @@ Several subtle bugs were found and fixed along the way that are easy to get wron
 - **EMA (Exponential Moving Average)** of model weights — standard in diffusion training, typically gives a noticeable quality boost over raw weights at minimal cost
 - **Classifier-free guidance / conditional generation** — CelebA ships with attribute labels (smiling, hair color, etc.); attribute-conditioned generation would be a natural extension
 - **Quantitative evaluation** (FID / Inception Score) to benchmark sample quality objectively rather than relying on visual inspection
-- **Gradient checkpointing** to unlock larger batch sizes within the existing VRAM budget
+
 - **Fused attention** (`torch.nn.functional.scaled_dot_product_attention`) in place of manual QKV/softmax attention, for further speed and memory headroom
-- **Experiment tracking** (Weights & Biases / TensorBoard) in place of ad-hoc matplotlib logging
+
+- **Latent diffusion (LDM)** — migrate from pixel-space to a compressed latent space using a pretrained VAE encoder/decoder, unlocking headroom for higher resolutions without the compute cost scaling with raw pixel count. Most valuable paired with the resolution increase above rather than as a standalone change at the current 64×64 scale.
+
+- **Text conditioning via cross-attention** — add a `CrossAttention` module (image features as queries, text embeddings as keys/values) alongside the existing self-attention layers, conditioned on a pretrained text encoder (CLIP). Requires either templated pseudo-captions from CelebA's attribute labels, auto-generated captions (e.g. via BLIP), or a switch to a captioned dataset.
+
 - **Higher resolution** (128×128 / 256×256) via progressive training or a latent-diffusion approach
-- **Learning rate warmup/scheduling** and multi-GPU training support for larger-scale runs
+
+
