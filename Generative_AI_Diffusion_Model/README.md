@@ -85,3 +85,22 @@ Several subtle bugs were found and fixed along the way that are easy to get wron
 - **Higher resolution** (128×128 / 256×256) via progressive training or a latent-diffusion approach
 
 
+## 📚 References
+
+* **Denoising Diffusion Probabilistic Models (DDPM)** 
+  Ho, J., Jain, A., & Abbeel, P. (2020). Advances in Neural Information Processing Systems, 33, 6840-6851. [arXiv:2006.11239](https://arxiv.org/abs/2006.11239)
+
+* **Denoising Diffusion Implicit Models (DDIM)** 
+  Song, J., Meng, C., & Ermon, S. (2020). International Conference on Learning Representations. [arXiv:2010.02502](https://arxiv.org/abs/2010.02502)
+
+* **Improved Denoising Diffusion Probabilistic Models (Cosine Schedule)** 
+  Nichol, A. Q., & Dhariwal, P. (2021). International Conference on Machine Learning, 8162-8171. [arXiv:2102.09672](https://arxiv.org/abs/2102.09672)
+
+* **U-Net: Convolutional Networks for Biomedical Image Segmentation** 
+  Ronneberger, O., Fischer, P., & Brox, T. (2015). Medical Image Computing and Computer-Assisted Intervention–MICCAI 2015, 234-241. [arXiv:1505.04597](https://arxiv.org/abs/1505.04597)
+
+*  **What are Diffusion Models?** 
+  Weng, L. (2021). Lil'Log. [lilianweng.github.io](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)
+
+* **Advanced Diffusion Architectures** 
+  APXML Courses. [apxml.com](https://apxml.com/courses/advanced-diffusion-architectures)
