@@ -67,8 +67,8 @@ Several subtle bugs were found and fixed along the way that are easy to get wron
 
 ## 📊 Results
 
-* **DDPM sample outputs** ![alt text](image.png)
-* **DDIM sample outputs** ![alt text](image-1.png)
+* **DDPM sample output** ![alt text](image.png)
+* **DDIM sample output** ![alt text](image-1.png)
 
 ## 🔭 Future Improvements
 
